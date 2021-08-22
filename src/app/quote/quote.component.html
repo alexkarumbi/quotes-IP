@@ -5,10 +5,14 @@
 
 <div class="container">
  <div class="row">
- <div *ngFor='let quotes of quotes'>
+ <div *ngFor='let quotes of quotes ;let i = index'>
      <ul>
          <li>
              "{{quotes.name}}" was posted on {{quotes.notedDate|date}} , <strong>{{quotes.notedDate|dateCount}} days ago </strong>
+             <button (click)=toggleDetails(i) class="btn btn-primary">Toggle Details</button>
+             <div *ngIf='quotes.showDetails'>
+                 <app-quote-details [quote]='quotes' (isComplete) ='deleteQuote($event,i)'></app-quote-details>
+             </div>
          </li>
      </ul>
  </div>

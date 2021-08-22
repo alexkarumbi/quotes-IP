@@ -11,7 +11,16 @@ export class QuoteComponent implements OnInit {
     new Quote (1,"Happiness quite unshared can scarcely be called happiness'then it has no taste.","Charlotte Bronte","Amira",0,0,new Date(2021,10,17)),
     new Quote (2,"Work hard till money buys you happiness","Karumbi","Muthambuku",0,0,new Date(2020,8,17))
   ]
-
+  toggleDetails(index:any){
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
+  deleteQuote(isDelete:any,index:any){
+    if(isDelete){
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+      if (toDelete){
+      this.quotes.splice(index,1);}
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
