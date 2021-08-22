@@ -21,6 +21,18 @@ export class QuoteComponent implements OnInit {
       this.quotes.splice(index,1);}
     }
   }
+  addNewQuote(quote:any){
+    let quoteLength=this.quotes.length;
+    quote.id=quoteLength+1;
+    quote.completeDate =new Date(quote.notedDate)
+    this.quotes.push(quote)
+  }
+  upvote(index:any){
+    this.quotes[index].upvotes++;
+  }
+  downvote(index:any){
+    this.quotes[index].downvotes++;}
+    
   constructor() { }
 
   ngOnInit(): void {
