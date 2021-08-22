@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 {This is a website which I have been able to design on my own ability .It is a website for Pizza Mojo which is able to take your order and then deliver it wherever you are .}
 
 ## By
-* Alex Karumbi
+* Alex Karumbi Muhia
 
 ## Setup/Installation Requirements
 Make sure your device has internet connectivity
