@@ -1,3 +1,16 @@
-<div >
+<div class="begin" >
     <h1>Welcome To Quotes Hub </h1>
+    <p>Here You will meet like-minded people. <br>  Feel free to share</p>
+</div>
+
+<div class="container">
+ <div class="row">
+ <div *ngFor='let quotes of quotes'>
+     <ul>
+         <li>
+             "{{quotes.name}}" was posted on {{quotes.notedDate}}
+         </li>
+     </ul>
+ </div>
+ </div>
 </div>
