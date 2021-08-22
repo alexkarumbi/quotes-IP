@@ -8,7 +8,8 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] =[
-    new Quote (1,"Happiness quite unshared can scarcely be called happiness'then it has no taste.","Charlotte Bronte","Amira",0,0,new Date(2018,10,17))
+    new Quote (1,"Happiness quite unshared can scarcely be called happiness'then it has no taste.","Charlotte Bronte","Amira",0,0,new Date(2021,10,17)),
+    new Quote (2,"Work hard till money buys you happiness","Karumbi","Muthambuku",0,0,new Date(2020,8,17))
   ]
 
   constructor() { }

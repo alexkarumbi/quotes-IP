@@ -8,7 +8,7 @@
  <div *ngFor='let quotes of quotes'>
      <ul>
          <li>
-             "{{quotes.name}}" was posted on {{quotes.notedDate}}
+             "{{quotes.name}}" was posted on {{quotes.notedDate|date}} , <strong>{{quotes.notedDate|dateCount}} days ago </strong>
          </li>
      </ul>
  </div>
