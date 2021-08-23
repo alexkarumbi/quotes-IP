@@ -12,7 +12,7 @@
          <li>
              "{{quotes.name}}" was posted on {{quotes.notedDate|date}} , <strong>{{quotes.notedDate|dateCount}} </strong>
              <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
-             <button (click)='upvote(i)' style="margin-left:10px;"><img src="https://github.com/alexkarumbi/quotes-IP/blob/master/src/assets/dislike.png?raw=true" alt="Like button" style="height: 30px;width: 30px;"><i>{{quotes.upvotes}}</i></button>
+             <button (click)='upvote(i)' style="margin-left:10px;"><img src="./assets/like.png" alt="Like button" style="height: 30px;width: 30px;"><i>{{quotes.upvotes}}</i></button>
              <button (click)='downvote(i)' style="margin-left:10px;"><img src="../../assets/dislike.png" alt="dislike button" style="height: 30px;width: 30px;"><i>{{quotes.downvotes}}</i></button>
              <div *ngIf='quotes.showDetails'>
                  <app-quote-details [quote]='quotes' (isComplete) ='deleteQuote($event,i)'></app-quote-details>
