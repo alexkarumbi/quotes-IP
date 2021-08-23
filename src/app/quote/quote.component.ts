@@ -9,7 +9,8 @@ export class QuoteComponent implements OnInit {
 
   quotes:Quote[] =[
     new Quote (1,"Happiness quite unshared can scarcely be called happiness'then it has no taste.","Charlotte Bronte","Amira",0,0,new Date(2020,10,17)),
-    new Quote (2,"Work hard till money buys you happiness","Karumbi","Muthambuku",0,0,new Date(2020,8,17))
+    new Quote (2,"Work hard till money buys you happiness","Karumbi","Muthambuku",0,0,new Date(2020,8,17)),
+    new Quote (3,"Always win","Grievin","Karumbi",0,0,new Date(2021,7,17))
   ]
   toggleDetails(index:any){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
@@ -25,6 +26,8 @@ export class QuoteComponent implements OnInit {
     let quoteLength=this.quotes.length;
     quote.id=quoteLength+1;
     quote.completeDate =new Date(quote.notedDate)
+    console.log(quote, this.quotes, 'Here is the new object');
+    
     this.quotes.push(quote)
   }
   upvote(index:any){
