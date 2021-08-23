@@ -10,7 +10,6 @@ export class DateCountPipe implements PipeTransform {
     let today:Date= new Date();
     let todayWithNoTime:any= new Date(today.getFullYear(),today.getMonth(),today.getDate())
     let dateDifference =Math.abs( todayWithNoTime - value);
-    console.log(dateDifference, "here is the date")
     let dateDifferenceInSeconds = dateDifference*0.001
     let dateCounter =Math.floor(dateDifferenceInSeconds/86400)
     
